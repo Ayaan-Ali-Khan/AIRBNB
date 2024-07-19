@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate.ejs") %>
+    <div class="row mt-3">
+        <h1>Sign Up</h1>
+        <div class="col-6 offset-3">
+            <form action="/signup" method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input name="user[username]" id="username" type="text" class="form-control" required>
+                    <div class="valid-feedback">username looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input name="user[email]" id="email" type="email" placeholder="Enter email" class="form-control"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="user[password]" id="password" type="password" placeholder="Set a strong password"
+                        class="form-control" required>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <button class="btn btn-outline-primary">Sign Up</button>
+                    </div>
+                    <div class="col-md-6">
+                        Already a User? <a href="/login" style="text-decoration: none;">Sign In</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
