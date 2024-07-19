@@ -136,6 +136,9 @@ body{
     border-radius: 0.75rem !important;
     object-fit: cover !important;
 }
+#show-listing-card{
+    width: 40vw !important;
+}
 
 /* Map */
 #map{
