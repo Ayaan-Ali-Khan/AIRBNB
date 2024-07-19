@@ -1,5 +1,5 @@
 # [Wanderlust](https://wanderlust-n8qe.onrender.com/listings)
-This is a Airbnb clone project I built using **express.js**, **MongoDB**, **javascript** and some APIs.
+This is an Airbnb clone project I built using **express.js**, **MongoDB**, **javascript** and some APIs.
 
 
 
