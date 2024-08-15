@@ -181,7 +181,7 @@
                         <h6 class="card-title listing-card-title">
                             <%= listing.title %>
                         </h6>
-                        <p class="card-text listing-card-text">&#8377;<%= listing.price.toLocaleString("en-IN") %>
+                        <p class="card-text listing-card-text">&#8377;<span id="listing-price"><%= listing.price %></span>
                                 /night<i class="tax-info">&nbsp;&nbsp;&nbsp;&nbsp;+18% GST</i></p>
                     </div>
                 </a>
@@ -190,15 +190,19 @@
     </div>
     <script>
         let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+        let listingPrice = document.querySelectorAll("#listing-price");
 
         taxSwitch.addEventListener("click", () => {
             let taxInfo = document.getElementsByClassName("tax-info");
-            for (info of taxInfo) {
-                if (info.style.display !== "inline") {
-                    info.style.display = "inline";
-                } else {
-                    info.style.display = "none";
-                }
+            if (taxSwitch.checked) {
+                listingPrice.forEach((list) => {
+                    list.innerText = list.innerText * 1.18;
+                })
+            }
+            else if (!taxSwitch.checked) {
+                listingPrice.forEach((list) => {
+                    list.innerText = list.innerText / 1.18;
+                })
             }
         })
     </script>
